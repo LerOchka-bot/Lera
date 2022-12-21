@@ -1,0 +1,34 @@
+﻿<Window x:Class="Лерок.Insert"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Лерок"
+        mc:Ignorable="d"
+        Title="Insert" Height="450" Width="800">
+    <Grid>
+        <Label Content="ФИО" HorizontalAlignment="Left" Height="52" Margin="10,71,0,0" VerticalAlignment="Top" Width="221"/>
+        <Label Content="Дата нарушения" HorizontalAlignment="Left" Height="52" Margin="10,130,0,0" VerticalAlignment="Top" Width="221"/>
+        <Label Content="Номер автомобиля" HorizontalAlignment="Left" Height="51" Margin="10,190,0,0" VerticalAlignment="Top" Width="221"/>
+        <Label Content="Вид нарушения" HorizontalAlignment="Left" Height="52" Margin="10,249,0,0" VerticalAlignment="Top" Width="221"/>
+        <Label Content="Сумма штрафа" HorizontalAlignment="Left" Height="52" Margin="10,308,0,0" VerticalAlignment="Top" Width="221"/>
+        <TextBox Name="txtFio" HorizontalAlignment="Left" Height="52" Margin="237,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" PreviewTextInput="txtFio_PreviewTextInput" />
+        <DatePicker Name="txtDate" SelectedDate="{Binding Date, StringFormat='dd/MM/yyyy'}" Margin="237,131,265,234"/>
+        <TextBox x:Name="txtNumber" HorizontalAlignment="Left" Height="51" MaxLength="8" Margin="237,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" />
+        <TextBox x:Name="txtSumma"  HorizontalAlignment="Left" Height="52" Margin="237,308,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" PreviewTextInput="txtSumma_PreviewTextInput"/>
+        <Button Name="bnt_insert" Content="Добавить запись" HorizontalAlignment="Left" Height="44" Margin="296,365,0,0" VerticalAlignment="Top" Width="181" Click="Insert_Click"/>
+        <Label Content="Добавление штрафа " FontSize="28" HorizontalAlignment="Left" Height="56" Margin="247,0,0,0" VerticalAlignment="Top" Width="300"/>
+        <ComboBox Name="txtBid" Height="52" Margin="237,249,265,0" VerticalAlignment="Top" SelectionChanged="txt_Bid_SelectionChanged">
+            <ComboBoxItem Name="c1">Превышение скорости более 20, но не более 40 километров в час</ComboBoxItem>
+            <ComboBoxItem Name="c2">Превышение скорости на более 40, но не более 60 километров в час</ComboBoxItem>
+            <ComboBoxItem Name="c3">Превышение скорости на более 60, но не более 80 километров в час</ComboBoxItem>
+            <ComboBoxItem Name="c4">Превышение скорости на более 80 километров в час</ComboBoxItem>
+            <ComboBoxItem Name="c5">Проезд через сплошную</ComboBoxItem>
+            <ComboBoxItem Name="c6">Проезд через две сплошных при повороте</ComboBoxItem>
+            <ComboBoxItem Name="c7">Выезд на встречную полосу</ComboBoxItem>
+            <ComboBoxItem Name="c8">Управление ТС водителем, не имеющим права управления ТС (за исключением учебной езды)</ComboBoxItem>
+            <ComboBoxItem Name="c9">Управление ТС водителем, лишенным права управления ТС</ComboBoxItem>
+        </ComboBox>
+        
+    </Grid>
+</Window>
