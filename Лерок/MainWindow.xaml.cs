@@ -40,7 +40,14 @@ namespace Лерок
         private void payment_Click(object sender, RoutedEventArgs e)
         {
             Payment window = new Payment();
-            window.Show(); 
+            window.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 window = new Window2();
+
+            window.Show();
         }
     }
 }

@@ -14,5 +14,10 @@
         <Button Name="insert" Content="Добавить нарушение" HorizontalAlignment="Left" Height="60" Margin="44,47,0,0" VerticalAlignment="Top" Width="196" Click="insert_Click"/>
         <Button Name="payment" Content="Оплатить штраф" HorizontalAlignment="Left" Height="60" Margin="44,320,0,0" VerticalAlignment="Top" Width="196" Click="payment_Click" RenderTransformOrigin="0.503,-0.408"/>
         <Button x:Name="show" Content="Посмотреть все нарушения" HorizontalAlignment="Left" Height="60" Margin="44,184,0,0" VerticalAlignment="Top" Width="196" Click="show_Click"/>
+        <Button Content="" HorizontalAlignment="Left" Height="50" Margin="725,359,0,0" VerticalAlignment="Top" Width="57" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="змейка.jpg"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
